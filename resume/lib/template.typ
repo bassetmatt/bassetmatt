@@ -62,19 +62,21 @@
     row-gutter: -1pt,
     column-gutter: 2pt,
     align: (center + horizon, left + horizon),
-    [#image("/img/phone.png")],
+    [#image("../img/phone.png")],
     box(baseline: 0pt)[
       (+33
       #box(baseline: -.3em, inset: (-6pt))[
-        #image("/img/fr.png", fit: "contain", height: 1.1em)
+        #image("../img/fr.png", fit: "contain", height: 1.1em)
       ]
       ) 6 35 95 57 85
     ],
 
-    [#image("/img/mail.png")], link("mailto:matthieu.bassetSL@gmail.com")[matthieu.bassetSL\@gmail.com],
-    [#image("/img/house.png")], [Hauts-de-France, mobile],
-    [#image("/img/linkedin.svg", width: 24pt)], [#link("https://www.linkedin.com/in/matthieubasset")[Matthieu Basset]],
-    [#image("/img/github.svg")], [#link("https://github.com/bassetmatt")[bassetmatt]],
+    [#image("../img/mail.png")], link("mailto:matthieu.bassetSL@gmail.com")[matthieu.bassetSL\@gmail.com],
+    [#image("../img/house.png")], [Hauts-de-France, mobile],
+    [#image("../img/linkedin.svg", width: 24pt)],
+    [#link("https://www.linkedin.com/in/matthieubasset")[Matthieu Basset]],
+
+    [#image("../img/github.svg")], [#link("https://github.com/bassetmatt")[bassetmatt]],
   )
 }
 
@@ -87,9 +89,9 @@
     row-gutter: 0pt,
     column-gutter: 1pt,
     align: (center + horizon, left + horizon),
-    [#image("/img/fr.png")], tr(fr: [Français : Natif], en: [French: Native]),
-    [#image("/img/gb.png")], tr(fr: [Anglais : Courant (C1)], en: [English: Fluent (C1)]),
-    [#image("/img/jp.png")], tr(fr: [Japonais : Débutant], en: [Japanese: Beginner (Hobby)]),
+    [#image("../img/fr.png")], tr(fr: [Français : Natif], en: [French: Native]),
+    [#image("../img/gb.png")], tr(fr: [Anglais : Courant (C1)], en: [English: Fluent (C1)]),
+    [#image("../img/jp.png")], tr(fr: [Japonais : Débutant], en: [Japanese: Beginner (Hobby)]),
   )
 }
 
@@ -161,12 +163,25 @@
 #let title-block = {
   set align(center)
   set text(size: 20pt)
-  text(fill: black, font: "Verdana")[
+  text(font: "Verdana")[
     #titles.job
   ]
 }
 
 #let resume = {
+  title-block
+  v(10pt)
+
+  grid(
+    columns: (3fr, 5.3fr),
+    gutter: 8pt,
+    left-block,
+    // Right Column
+    right-col,
+  )
+}
+
+#let resume-dark-mode = {
   title-block
   v(10pt)
 

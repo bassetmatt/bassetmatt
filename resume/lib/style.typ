@@ -1,9 +1,10 @@
 #import "trads.typ": tr
-
+#import "config.typ": DARK
 /* Variables */
 #let colors = (
   resume-blue: rgb(5, 99, 193),
   left-grey: rgb(240, 240, 240),
+  left-grey-alpha: rgb(240, 240, 240, 20),
 )
 
 #let page-common = (
@@ -27,7 +28,7 @@
 
 #let left-block-style = (
   block: (
-    fill: colors.left-grey,
+    fill: if DARK { colors.left-grey-alpha } else { colors.left-grey },
     inset: (
       left: 2pt,
       right: 3pt,
