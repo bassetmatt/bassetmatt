@@ -1,14 +1,14 @@
-Hi, I'm Matthieu Basset !\
+Hi, I'm Matthieu Basset!\
 I'm a graduate from ISAE-Supaero and Polytechnique Montréal in Software Engineering.
 
-Here is my resume, written in *typst* !
-
+Here is my resume, written in *typst*!
+<!-- Inspired from the method in https://github.com/wentam/typst-on-gh to display typst svg on github-->
 <p align="center" dir="auto">
-  <a href="https://wentam.github.io/typst-on-gh//typ-build/README.typ.html" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/bassetmatt/bassetmatt/tree/main/resume">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="resume/CV-EN-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="resume/CV-EN-light.svg">
-      <img alt="Fallback image description" src="default-image.png">
+      <img alt="Image failed to load">
     </picture>
   </a>
 </p>
