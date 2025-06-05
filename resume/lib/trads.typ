@@ -51,22 +51,25 @@
   ),
   skills: tr(
     fr: [
-      Avancé: Python, C, C++, Rust, git\
-      Bonnes connaissances : Java, Shell, Qt, C\#, typst/LaTeX \
-      Programmation Graphique (SDL, OpenGL)\
+      Avancé : Python, C, C++, Rust, git\
+      Bonnes connaissances : Java, Shell, Qt, C\#, typst/LaTeX, SDL, OpenGL\
+      Connaissances : HTML/CSS, JavaScript\
       Utilisation quotidienne de Linux depuis plus de trois ans (Archlinux), confortable avec Windows/Mac.
     ],
     en: [
       Advanced: Python, C, C++, Rust, git\
-      Fair: Java, Shell, Qt, C\#, typst/LaTeX \
-      Graphical : SDL, OpenGL\
+      Fair: Java, Shell, Qt, C\#, typst/LaTeX, SDL, OpenGL \
+      Basic Knowledge: HTML/CSS, JavaScript\
       Daily use of Linux for more than three years, comfortable with Windows/Mac.
     ],
   ),
   hobbies_etc: tr(
     fr: [
       = Centres d'intérêts
-      - Sports : Escalade, Canyoning, Badminton, Ultimate
+      - Sports :
+        - Escalade
+        - Badminton
+        - Ultimate
       - Intéressé par la culture japonaise
 
       = Divers
@@ -75,12 +78,15 @@
     ],
     en: [
       = Hobbies
-      - Sports: Climbing/Bouldering, Badminton, Ultimate
+      - Sports:
+        - Climbing/Bouldering
+        - Badminton
+        - Ultimate
       - Interested in Japanese culture
 
       = Miscellaneous
       - Driving License
-      - Bac S mention TB (french high school diploma)
+      - Bac S with distinction (french high school diploma)
     ],
   ),
   education: (

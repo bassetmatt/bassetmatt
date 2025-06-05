@@ -1,7 +1,30 @@
-#import "style.typ": left-block-style, left-block-margins
+#import "style.typ": left-block-style, left-block-margins, colors, right-col-style
 #import "trads.typ": titles, blocks, tr
 
 #let right-col = [
+  #show heading.where(level: 1): it => context {
+    let s = measure(it.body)
+    let style = if text.lang == "fr" {
+      right-col-style.h1.fr
+    } else {
+      right-col-style.h1.en
+    }
+    block(..style)[
+      #grid(
+        columns: (auto, 1fr),
+        gutter: 2pt,
+        it,
+        line(
+          length: 110%,
+          start: (
+            0%,
+            0% + 0.485 * s.height,
+          ),
+          stroke: (thickness: 0.75pt, paint: colors.resume-blue),
+        ),
+      )
+    ]
+  }
   #set par(justify: true)
 
   = #titles.education
@@ -30,24 +53,34 @@
 ]
 
 #let contact = {
+  [= Contact]
+  v(-.7em)
   set image(width: 21pt)
-
   table(
     stroke: 0pt,
     columns: (23pt, 150pt),
     row-gutter: -1pt,
     column-gutter: 2pt,
     align: (center + horizon, left + horizon),
-    [#image("/img/phone.png")], tr(fr: [06 35 95 57 85], en: [+33 6 35 95 57 85]),
+    [#image("/img/phone.png")],
+    box(baseline: 0pt)[
+      (+33
+      #box(baseline: -.3em, inset: (-6pt))[
+        #image("/img/fr.png", fit: "contain", height: 1.1em)
+      ]
+      ) 6 35 95 57 85
+    ],
+
     [#image("/img/mail.png")], link("mailto:matthieu.bassetSL@gmail.com")[matthieu.bassetSL\@gmail.com],
     [#image("/img/house.png")], [Hauts-de-France, mobile],
-    [#image("/img/linkedin.svg", width: 17pt)], [#link("https://www.linkedin.com/in/matthieubasset")[Matthieu Basset]],
+    [#image("/img/linkedin.svg", width: 24pt)], [#link("https://www.linkedin.com/in/matthieubasset")[Matthieu Basset]],
     [#image("/img/github.svg")], [#link("https://github.com/bassetmatt")[bassetmatt]],
   )
 }
 
 #let languages = {
   set image(width: 15pt)
+  v(-.7em)
   table(
     stroke: 0pt,
     columns: (20pt, 180pt),
@@ -55,14 +88,14 @@
     column-gutter: 1pt,
     align: (center + horizon, left + horizon),
     [#image("/img/fr.png")], tr(fr: [Français : Natif], en: [French: Native]),
-    [#image("/img/gb.png")], tr(fr: [Anglais : Courant /(C1)], en: [English: Fluent (C1)]),
+    [#image("/img/gb.png")], tr(fr: [Anglais : Courant (C1)], en: [English: Fluent (C1)]),
     [#image("/img/jp.png")], tr(fr: [Japonais : Débutant], en: [Japanese: Beginner (Hobby)]),
   )
 }
 
 #let left-line = {
   line(
-    length: 100% + left-block-margins.right,
+    length: 100% + left-block-margins.left + left-block-margins.right,
     start: (0% - left-block-margins.left, 0%),
     stroke: (thickness: 0.5pt),
   )
@@ -70,7 +103,30 @@
 
 
 #let left-block = {
-  block(..left-block-style)[
+  block(..left-block-style.block)[
+    #show heading.where(level: 1): it => context {
+      let s = measure(it.body)
+      let style = if text.lang == "fr" {
+        left-block-style.h1.fr
+      } else {
+        left-block-style.h1.en
+      }
+      block(..style)[
+        #grid(
+          columns: (auto, 1fr),
+          gutter: 2pt,
+          it,
+          line(
+            length: 100% + left-block-margins.right,
+            start: (
+              0%,
+              0% + 0.62 * s.height,
+            ),
+            stroke: (thickness: 0.75pt, paint: colors.resume-blue),
+          ),
+        )
+      ]
+    }
     // Presentation
     #set text(size: 11pt)
     = #titles.about_me
@@ -78,11 +134,11 @@
       #blocks.about_me
     ]
 
-    #left-line
+    // #left-line
 
     // Contact
     #contact
-    #left-line
+    // #left-line
 
     // Skills
     = #titles.skills
@@ -94,7 +150,7 @@
     = #titles.languages
     #languages
 
-    #left-line
+    // #left-line
     // Hobbies
     #blocks.hobbies_etc
 
