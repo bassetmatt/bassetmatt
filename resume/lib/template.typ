@@ -1,5 +1,5 @@
-#import "style.typ": left-block-style, apply_right-col_style, apply_left-block_style
-#import "trads.typ": titles, blocks, tr
+#import "style.typ": apply_left-block_style, apply_right-col_style, left-block-style
+#import "trads.typ": blocks, titles, tr
 
 #let right-col = [
   #show: apply_right-col_style
@@ -80,23 +80,11 @@
     row-gutter: 0pt,
     column-gutter: 1pt,
     align: (center + horizon, left + horizon),
-    [#image("../img/fr.png")],
-    tr(
-      fr: [Français : Natif],
-      en: [French: Native],
-    ),
+    [#image("../img/fr.png")], tr(fr: [Français : Natif], en: [French: Native]),
 
-    [#image("../img/gb.png")],
-    tr(
-      fr: [Anglais : Courant (C1)],
-      en: [English: Fluent (C1)],
-    ),
+    [#image("../img/gb.png")], tr(fr: [Anglais : Courant (C1)], en: [English: Fluent (C1)]),
 
-    [#image("../img/jp.png")],
-    tr(
-      fr: [Japonais : Débutant],
-      en: [Japanese: Beginner (Hobby)],
-    ),
+    [#image("../img/jp.png")], tr(fr: [Japonais : Débutant], en: [Japanese: Beginner (Hobby)]),
   )
 }
 

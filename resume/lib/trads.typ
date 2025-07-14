@@ -51,13 +51,13 @@
   ),
   skills: tr(
     fr: [
-      Avancé : Python, C, C++, Rust, git\
+      Avancé : *Python*, C, *C++*, *Rust*, git\
       Bonnes connaissances : Java, Shell, Qt, C\#, typst/LaTeX, SDL, OpenGL\
       Connaissances : HTML/CSS, JavaScript\
       Utilisation quotidienne de Linux depuis plus de trois ans (Archlinux), confortable avec Windows/Mac.
     ],
     en: [
-      Advanced: Python, C, C++, Rust, git\
+      Advanced: *Python*, C, *C++*, *Rust*, git\
       Fair: Java, Shell, Qt, C\#, typst/LaTeX, SDL, OpenGL \
       Basic Knowledge: HTML/CSS, JavaScript\
       Daily use of Linux for more than three years, comfortable with Windows/Mac.
