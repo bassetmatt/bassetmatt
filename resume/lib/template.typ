@@ -32,34 +32,34 @@
 #let contact = {
   [= Contact]
   v(-.7em)
-  set image(width: 21pt)
+  set image(width: 16pt)
   table(
     stroke: 0pt,
     columns: (23pt, 150pt),
     row-gutter: -1pt,
     column-gutter: 2pt,
     align: (center + horizon, left + horizon),
-    [#image("../img/phone.png")],
+    [#image("../img/phone.svg")],
     box(baseline: 0pt)[
       (+33
       // Convoluted way to have the flag inline
-      #box(baseline: -.3em, inset: (-6pt))[
+      #box(baseline: -.3em, inset: (top: -6pt, bottom: -6pt, right: -6pt, left: -4pt))[
         #image("../img/fr.png", fit: "contain", height: 1.1em)
       ]
       ) 6 35 95 57 85
     ],
 
-    [#image("../img/mail.png")],
+    [#image("../img/mail.svg")],
     link("mailto:matthieu.bassetSL@gmail.com")[
       matthieu.bassetSL\@gmail.com
     ],
 
-    [#image("../img/house.png")],
+    [#image("../img/home.svg")],
     [
       Hauts-de-France, mobile
     ],
 
-    [#image("../img/linkedin.svg", width: 24pt)],
+    [#image("../img/linkedin.svg")],
     link("https://www.linkedin.com/in/matthieubasset")[
       Matthieu Basset
     ],
