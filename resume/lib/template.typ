@@ -1,5 +1,6 @@
 #import "style.typ": apply_left-block_style, apply_right-col_style, left-block-style
 #import "trads.typ": blocks, titles, tr
+#import "config.typ": DARK
 
 #let right-col = [
   #show: apply_right-col_style
@@ -30,6 +31,17 @@
 ]
 
 #let contact = {
+  let get_img = name => {
+    if DARK {
+      return image("../img/" + name + "-white.svg")
+    } else {
+      return image("../img/" + name + ".svg")
+    }
+  }
+  let phone_img = get_img("phone")
+  let mail_img = get_img("mail")
+  let home_img = get_img("home")
+  let github_img = get_img("github")
   [= Contact]
   v(-.7em)
   set image(width: 18pt)
@@ -39,7 +51,8 @@
     row-gutter: -1pt,
     column-gutter: 2pt,
     align: (center + horizon, left + horizon),
-    [#image("../img/phone.svg")],
+
+    phone_img,
     box(baseline: 0pt)[
       (+33
       // Convoluted way to have the flag inline
@@ -49,12 +62,12 @@
       ) 6 35 95 57 85
     ],
 
-    [#image("../img/mail.svg")],
+    mail_img,
     link("mailto:matthieu.bassetSL@gmail.com")[
       matthieu.bassetSL\@gmail.com
     ],
 
-    [#image("../img/home.svg")],
+    home_img,
     [
       Hauts-de-France, mobile
     ],
@@ -64,7 +77,7 @@
       Matthieu Basset
     ],
 
-    [#image("../img/github.svg")],
+    github_img,
     link("https://github.com/bassetmatt")[
       bassetmatt
     ],

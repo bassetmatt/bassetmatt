@@ -3,7 +3,7 @@
    viewBox="0 0 24 24"
    version="1.1"
    id="svg1"
-   sodipodi:docname="home.svg"
+   sodipodi:docname="home-white.svg"
    inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -21,7 +21,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="24.875"
-     inkscape:cx="11.979899"
+     inkscape:cx="11.939698"
      inkscape:cy="12"
      inkscape:window-width="1536"
      inkscape:window-height="806"
@@ -32,5 +32,5 @@
   <path
      d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"
      id="path1"
-     style="fill:#000000;fill-opacity:1" />
+     style="fill:#ffffff;fill-opacity:1" />
 </svg>
