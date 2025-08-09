@@ -12,3 +12,6 @@ The SVG use the light/dark mode switch featured in `lib/config.typ` (small file 
   - `style.typ`: All styling elements
   - `template.typ`: Layout elements, using style elements
   - `trads.typ`: Main text contents, used in template, they exist in both French and English to easily generate my resume in both languages.
+
+## Theme
+A themed version of my resume is available in the `theme-dnd` folder!
