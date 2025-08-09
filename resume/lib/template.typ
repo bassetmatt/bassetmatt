@@ -32,7 +32,7 @@
 #let contact = {
   [= Contact]
   v(-.7em)
-  set image(width: 16pt)
+  set image(width: 18pt)
   table(
     stroke: 0pt,
     columns: (23pt, 150pt),
