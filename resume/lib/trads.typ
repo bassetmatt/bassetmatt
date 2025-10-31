@@ -52,15 +52,17 @@
   skills: tr(
     fr: [
       Avancé : *Python*, C, *C++*, *Rust*, git\
-      Bonnes connaissances : Java, Shell, Qt, C\#, typst/LaTeX, SDL, OpenGL\
+      Intermédiaire : Java, Shell, Qt, C\#, typst/LaTeX, SDL, OpenGL\
       Connaissances : HTML/CSS, JavaScript\
-      Utilisation quotidienne de Linux depuis plus de trois ans (Archlinux), confortable avec Windows/Mac.
+      Habitué aux environnements Linux\
+      Soft Skills: Gestion du stress, curiosité, écoute active des directives
     ],
     en: [
       Advanced: *Python*, C, *C++*, *Rust*, git\
       Fair: Java, Shell, Qt, C\#, typst/LaTeX, SDL, OpenGL \
-      Basic Knowledge: HTML/CSS, JavaScript\
-      Daily use of Linux for more than three years, comfortable with Windows/Mac.
+      Basic Knowledge: HTML/CSS/JS\
+      Daily use of Linux for more than three years\
+      Soft Skills: Stress management, curiosity, active listening to instructions
     ],
   ),
   hobbies_etc: tr(
@@ -69,7 +71,6 @@
       - Sports :
         - Escalade
         - Badminton
-        - Ultimate
       - Intéressé par la culture japonaise
 
       = Divers
@@ -81,7 +82,6 @@
       - Sports:
         - Climbing/Bouldering
         - Badminton
-        - Ultimate
       - Interested in Japanese culture
 
       = Miscellaneous
@@ -147,14 +147,14 @@
         == BETA Technologies -- Stage de fin de maîtrise
         _Septembre--Décembre 2024_\
         #par()[
-          Développement d'applications en Python via le framework Qt. Conception d'algorithmes.
+          Développement d'applications en Python via le framework Qt. Conception d'algorithmes. Grande autonomie dans le travail.
         ]
       ],
       en: [
         == BETA Technologies -- End of studies internship
         _September--December 2024_\
         #par()[
-          Development of applications in Python using the Qt framework. Design of algorithms.
+          Development of applications in Python using the Qt framework. Design of algorithms. High level of autonomy in work tasks.
         ]
       ],
     ),
@@ -168,7 +168,7 @@
       ],
       en: [
         == Laboratoires ISAE-SUPAERO -- Research Internship
-        _May-July 2022_\
+        _May--July 2022_\
         Work on developing encryption for a nanosatellite, creating a communication interface for a test bench in Python.
       ],
     ),

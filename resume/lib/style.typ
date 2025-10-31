@@ -38,7 +38,7 @@
   )
 
   // Link format (underlined)
-  show link: lk => underline(offset: 1pt, lk)
+  show link: lk => underline(offset: 1pt, lk, stroke: .25pt)
   // Disabled blue links,, too flashy
   // show link: set text(fill: colors.resume-blue)
 
@@ -121,7 +121,8 @@
       // Blue line after heading body
       #grid(
         columns: (auto, 1fr),
-        gutter: 2pt, // Spacing between line start and text
+        gutter: 2pt,
+        // Spacing between line start and text
         head,
         line(
           // Automatically adapt with margin changes
@@ -162,7 +163,8 @@
       // Blue line after heading body
       #grid(
         columns: (auto, 1fr),
-        gutter: 2pt, // Spacing between line start and text
+        gutter: 2pt,
+        // Spacing between line start and text
         head,
         line(
           // Obviously overdimensionned, not very concerning
@@ -178,5 +180,18 @@
     ]
   }
   set par(justify: true)
+  // Temporary fix to avoid compilation issues in tinymist extension that is not up to date
+  set par(
+    ..(
+      if (sys.version.minor > 13) {
+        (
+          justification-limits: (
+            tracking: (min: -0.01em, max: 0.02em),
+          ),
+        )
+      }
+    ),
+  )
+
   doc
 }

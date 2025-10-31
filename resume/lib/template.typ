@@ -42,6 +42,9 @@
   let mail_img = get_img("mail")
   let home_img = get_img("home")
   let github_img = get_img("github")
+  let email = "m.basset.pro@proton.me"
+
+
   [= Contact]
   v(-.7em)
   set image(width: 18pt)
@@ -63,8 +66,8 @@
     ],
 
     mail_img,
-    link("mailto:matthieu.bassetSL@gmail.com")[
-      matthieu.bassetSL\@gmail.com
+    link("mailto:" + email)[
+      #email
     ],
 
     home_img,

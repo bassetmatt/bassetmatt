@@ -45,8 +45,6 @@
     font: "TT Jenevers Trl",
   )
 
-  // Link format (underlined)
-  show link: lk => underline(offset: 2pt, lk, stroke: .4pt)
 
   set par(
     leading: 0.55em,
@@ -104,6 +102,18 @@
     ]
   }
   set par(justify: true)
+  // Temporary fix to avoid compilation issues in tinymist extension that is not up to date
+  set par(
+    ..(
+      if (sys.version.minor > 13) {
+        (
+          justification-limits: (
+            tracking: (min: -0.01em, max: 0.02em),
+          ),
+        )
+      }
+    ),
+  )
   doc
 }
 
